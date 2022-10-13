@@ -93,7 +93,10 @@ precmd() {
   # Virtualenv integration
   STATUS+=$(virtualenv_info)
 
+  # Shell type
+  TYPE="%(!.#.$)"
+
   # Final prompt assembly
-  PS1=$'\n'"%B"$foreground_modal"╭╴%f$STATUS"$'\n'$foreground_modal"╰──╴%f%b"
+  PS1=$'\n'"%B"$foreground_modal"╭╴%f$STATUS"$'\n'$foreground_modal"╰─╴$TYPE %f%b"
 }
 
