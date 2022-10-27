@@ -56,10 +56,12 @@ function vcs_info_custom {
   if [ "${vcs_info_msg_2_}" != "" ]; then
     VCS_INFO+=" at %F{magenta}"${vcs_info_msg_2_}"%f"
 
+    # Add action
+    [ "${vcs_info_msg_5_}" != "" ] \
+      && VCS_INFO+=" ("${vcs_info_msg_5_}")"
+
     # Add status
     VCS_STATUS=""
-    [ "${vcs_info_msg_5_}" != "" ] \
-      && VCS_STATUS+=${vcs_info_msg_5_}"|"}
     [ "${vcs_info_msg_3_}" != "" ] \
       && VCS_STATUS+="%F{green}"${vcs_info_msg_3_}"%f"
     [ "${vcs_info_msg_4_}" != "" ] \
