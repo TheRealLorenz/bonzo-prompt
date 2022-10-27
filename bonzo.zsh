@@ -76,7 +76,7 @@ function vcs_info_custom {
     [ "${vcs_info_msg_4_}" != "" ] \
       && VCS_STATUS+="%F{red}"${vcs_info_msg_4_}"%f"
     [ "$VCS_STATUS" != "" ] \
-      && VCS_INFO+=" ["$VCS_STATUS"]"
+      && VCS_INFO+=" "$VCS_STATUS
   fi
 
   echo $VCS_INFO
