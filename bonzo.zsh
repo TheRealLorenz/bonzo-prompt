@@ -18,31 +18,20 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 # Styling
 zstyle ':vcs_info:*' max-exports 6
 zstyle ':vcs_info:*' nvcsformats "%5~/ "
-zstyle ':vcs_info:*' formats \
-  '%r' \
-  '%S' \
-  '%b' \
-  '%c' \
-  '%u'
-  # Repo name
-  # Relative path
-  # Branch
-  # Changes
-  # Untracked
+zstyle ':vcs_info:*' formats '%r' '%S' '%b' '%c' '%u'
+# 1 Repo name
+# 2 Relative path
+# 3 Branch
+# 4 Changes
+# 5 Untracked
 
-zstyle ':vcs_info:*' actionformats \
-  '%r' \
-  '%S' \
-  '%b' \
-  '%c' \
-  '%u' \
-  '%a'
-  # Repo name
-  # Relative path
-  # Branch
-  # Changes
-  # Untracked
-  # Action
+zstyle ':vcs_info:*' actionformats '%r' '%S' '%b' '%c' '%u' '%a'
+# 1 Repo name
+# 2 Relative path
+# 3 Branch
+# 4 Changes
+# 5 Untracked
+# 6 Action
 
 # Modal color depending on the return code
 # of the last command
