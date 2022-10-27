@@ -5,8 +5,8 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 +vi-git-untracked(){
-    if [[ "${#hook_com[unstaged]}" == "2" ]]; then
-	return
+    if [[ "${hook_com[unstaged]}" == *"T" ]]; then
+	    return
     fi
 
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
